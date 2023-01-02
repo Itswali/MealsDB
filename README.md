@@ -157,7 +157,7 @@ You can deploy this project using:
 - Twitter: [@](https://twitter.com/WaliMuh94818599)
 - LinkedIn: [@](https://www.linkedin.com/in/wali-muhammad-666040244/)
   
-  👤 **Samuel Kyere**
+  👤 ****
 
 - GitHub: [@](https://github.com/)
 - Twitter: [@](https://twitter.com/)
