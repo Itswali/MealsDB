@@ -1,0 +1,25 @@
+.header-nav {
+  height: 50px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 12px;
+  margin-left: 8%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-right: 10%;
+  padding: 2px;
+}
+
+.nav-links a {
+  color: rgb(214, 130, 130);
+  font-size: 28px;
+  font-weight: 800;
+}
