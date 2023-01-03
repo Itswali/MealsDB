@@ -1,4 +1,5 @@
 # 📗 Table of Contents
+
 - [📗 Table of Contents](#-table-of-contents)
 - [📗 Table of Contents](#-table-of-contents-1)
 - [📖 \[to-do-list\] ](#-to-do-list-)
@@ -25,12 +26,7 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-
-
-
 # 📖 [Capstone-Project] <a name="Capstone-Project"></a>
-
-
 
 **[to-do-list]** is a program that allows the user to add and remove differen tasks and mark them completed
 
@@ -42,8 +38,6 @@
 - Javascript
 
 ### Tech Stack <a name="tech-stack"></a>
-
-
 
 <details>
   <summary>Client</summary>
@@ -66,36 +60,23 @@
   </ul>
 </details>
 
-
 ### Key Features <a name="key-features"></a>
 
-
-
 - **[Add a task]**
- 
+
 - **[Remove a task]**
 
 - **[Mark a task as completed]**
-  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
-
-
 - [Live Demo Link](https://Itswali.github.io/capstoneProject2/dist)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
-
 
 ### Prerequisites
 
@@ -115,75 +96,45 @@ Install this project with:
 
 To run the project, execute the following command:
 
-
 ### Run tests
 
 To run tests, run the following command:
 
+### Deployment
 
+You can deploy this project using:
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
 
 ### Deployment
 
 You can deploy this project using:
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## 👥 Authors <a name="authors"></a>
-
-
-
-
-### Deployment
-
-You can deploy this project using:
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-## 👥 Authors <a name="authors"></a>
-
-
-
-
 
 👤 **Wali Muhammad**
 
 - GitHub: [@](https://github.com/Itswali)
 - Twitter: [@](https://twitter.com/WaliMuh94818599)
 - LinkedIn: [@](https://www.linkedin.com/in/wali-muhammad-666040244/)
-  
-  👤 ****
 
-- GitHub: [@](https://github.com/)
-- Twitter: [@](https://twitter.com/)
-- LinkedIn: [@](https://www.linkedin.com/in//)
+  👤 **Utsargo Roy**
 
+- GitHub: [@utsargo](https://github.com/utsargo)
+- Twitter: [@royutsargo](https://twitter.com/royutsargo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-
-
-
-
-
-
 - [ ] **[Will add further testing functions.]**
 
-
-- 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+- <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -193,34 +144,21 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## Live Link:
 
 - https://Itswali.github.io/capstoneProject2/dist/
 
-
 ## Show your support
-
-
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## ❓ FAQ <a name="faq"></a>
-
-
 
 - **[Question_1]**
 
@@ -232,11 +170,8 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
