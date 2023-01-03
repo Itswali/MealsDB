@@ -1,14 +1,6 @@
-@import '_body.scss';
-@import '_header.scss';
 @import '_nav.scss';
-@import '_middle.scss';
-@import '_footer.scss';
 
 * {
   text-decoration: none;
   font-family: "poppins", sans-serif;
-}
-
-body {
-  height: 200vh;
 }

@@ -1,12 +1,9 @@
-body {
-  background-color: antiquewhite;
-}
-
 .header-nav {
   position: -webkit-sticky;
   position: sticky;
   height: 50px;
   display: flex;
+  border: 3px solid black;
   padding: 5px;
   justify-content: space-between;
 }
@@ -32,3 +29,8 @@ body {
   font-size: 28px;
   font-weight: 800;
 }
+
+* {
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+}/*# sourceMappingURL=style.css.map */
