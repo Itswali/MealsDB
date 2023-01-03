@@ -1,0 +1,15 @@
+@import '_body.scss';
+@import '_header.scss';
+@import '_nav.scss';
+@import '_middle.scss';
+@import '_footer.scss';
+
+* {
+    background-color: burlywood;
+}
+
+.header {
+    font-size: larger;
+    border: 2px solid black;
+    height: 50px;
+}
