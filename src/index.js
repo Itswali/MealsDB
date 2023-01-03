@@ -1,3 +1,3 @@
 import 'lodash';
-import './style/style.css';
+import './style/style.scss';
 // import './img/logo.png';
