@@ -1,4 +1,10 @@
+body {
+  background-color: antiquewhite;
+}
+
 .header-nav {
+  position: -webkit-sticky;
+  position: sticky;
   height: 50px;
   display: flex;
   padding: 5px;
@@ -8,6 +14,9 @@
 .logo {
   padding: 12px;
   margin-left: 8%;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 80px;
 }
 
 .nav-links {
@@ -27,3 +36,16 @@
 * {
   text-decoration: none;
 }
+
+* {
+  text-decoration: none;
+}
+
+* {
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  height: 200vh;
+}/*# sourceMappingURL=style.css.map */
