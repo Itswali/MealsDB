@@ -7,6 +7,8 @@ $danger: red;
 .test {
   border: 2px solid $danger;
   padding: 24px;
+  display: flex;
+  justify-content: space-around;
 }
 
 main {

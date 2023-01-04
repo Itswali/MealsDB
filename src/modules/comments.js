@@ -16,7 +16,11 @@ const commentCount = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const countSpan = document.querySelector(`#${itemId} .comment-count`);
   await response.json().then((comments) => {
-    countSpan.innerHTML = comments.length;
+    if (comments.length === undefined) {
+      countSpan.innerHTML = '0';
+    } else {
+      countSpan.innerHTML = comments.length;
+    }
   });
 };
 export { addComment, commentCount };
