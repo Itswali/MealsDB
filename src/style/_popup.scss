@@ -1,0 +1,53 @@
+.close-button {
+    border: 2px solid black;
+}
+
+.card-pop {
+    border: 2px solid black;
+}
+
+
+
+.card,
+.overlay-card {
+  width: 100%;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.project-image {
+  width: 90%;
+  height: auto;
+  min-height: 200px;
+  min-width: 250px;
+  border: 1px solid black;
+}
+
+.project-tittle {
+  color: #172b4d;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: center;
+}
+
+.button {
+    width: fit-content;
+    height: 48;
+    border-radius: 8px;
+    background: rgb(192, 141, 141);
+    border: 1px solid #be692f;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #7a173d;
+  }
+
+
+
