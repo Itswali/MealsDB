@@ -1,59 +1,34 @@
-const cardsSection = document.querySelector('.card-grid');
+const showPopup = (cardData, button) => {
+  // Create the pop-up elements and content
+  const popupCard = document.createElement('div');
+  popupCard.classList.add('popup-card');
 
-const projectsCard = [
-  {
-    id: '1',
-    image: 'img/desktop1.png',
-    tittle: 'Title1',
-  },
+  const popupCardInner = document.createElement('div');
+  popupCardInner.classList.add('popup-card-inner');
 
-  {
-    id: '2',
-    image: 'img/desktop2.png',
-    tittle: 'Title 2',
-  },
+  const popupImage = document.createElement('img');
+  popupImage.setAttribute('class', 'popup-image');
+  popupImage.setAttribute('alt', '');
 
-  {
-    id: '3',
-    image: 'img/desktop3.png',
-    tittle: 'Title 3',
-  },
+  const popupText = document.createElement('span');
+  popupText.setAttribute('class', 'popup-text');
 
-];
+  const p = document.createElement('p');
+  p.textContent = cardData.name;
 
-const createProjects = () => {
-  projectsCard.forEach((project) => {
-    const card1 = document.createElement('div');
-    card1.classList.add('card');
-    cardsSection.appendChild(card1);
+  const popupHeart = document.createElement('span');
+  popupHeart.setAttribute('class', 'popup-heart');
+  popupHeart.innerHTML = `&#x2764; <i>${cardData.likes} likes</i>`;
 
-    const imgContainer = document.createElement('div');
-    imgContainer.classList.add('project-image');
-    card1.appendChild(imgContainer);
+  popupText.appendChild(p);
+  popupText.appendChild(popupHeart);
 
-    const imgCard = document.createElement('img');
-    imgCard.classList.add('image');
-    imgCard.setAttribute('src', project.image);
-    imgCard.setAttribute('alt', 'my first project');
-    imgContainer.appendChild(imgCard);
+  const popupBtn = document.createElement('span');
+  popupBtn.setAttribute('class', 'popup-btn');
 
-    const infoCard = document.createElement('div');
-    infoCard.classList.add('projects');
-    card1.appendChild(infoCard);
+  const commentBtn = document.createElement('button');
+  commentBtn.textContent = 'Comments';
 
-    const tittleCard = document.createElement('h2');
-    tittleCard.classList.add('project-tittle');
-    tittleCard.innerText = project.tittle;
-    infoCard.appendChild(tittleCard);
-
-    // We can add the dish detail in here
-
-    const seeProject = document.createElement('button');
-    seeProject.classList.add('button');
-    seeProject.innerText = 'Comments';
-    seeProject.id = project.id;
-    infoCard.appendChild(seeProject);
-  });
-};
-
-createProjects();
+  // Add the event listener to the button
+  commentBtn.addEventListener('click', () => {
+    const comments = cardData.comments.map((comment) => `<li>${comment}</li
