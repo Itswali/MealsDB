@@ -12,11 +12,20 @@ const addComment = async (baseLink, itemId, userName, comment) => {
   });
 };
 
-const commentCount = async (baseLink, itemId) => {
+const commentCount = (arr) => {
+  let result = 0;
+  if (arr.length === undefined) {
+    result = 0;
+  } else {
+    result = arr.length;
+  }
+  return result;
+};
+const showCount = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const countSpan = document.querySelector(`#${itemId} .comment-count`);
   await response.json().then((comments) => {
-    countSpan.innerHTML = comments.length;
+    countSpan.innerHTML = commentCount(comments);
   });
 };
-export { addComment, commentCount };
+export { addComment, commentCount, showCount };
