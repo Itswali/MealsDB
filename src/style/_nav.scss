@@ -4,15 +4,18 @@
   display: flex;
   padding: 5px;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 .logo {
-  padding: 12px;
   margin-left: 8%;
-  border: 2px solid black;
   border-radius: 20px;
   width: 80px;
+}
+
+.for-logo-img {
+  width: 80px;
+  padding: 12px;
 }
 
 .nav-links {

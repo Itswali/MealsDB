@@ -1,41 +1,62 @@
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 100px;
+    width: 90%;
     padding: 50px;
   }
   
   .card {
-    border: 2px solid blue;
-    width: 300px;
-    height: 230px;
-    text-align: center;
+    width: 100%;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
   }
   
   .image-placeholder {
-    height: 70px;
-    width: 120px;
-    border: 2px solid greenyellow;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background-color: rgb(112, 60, 60);
+    min-width: 250px;
+    justify-content: center;
   }
-  
-  .for-btn {
-    display: flex;
-    flex-direction: column;
-    padding-left: 20%;
-    padding-right: 20%;
-    gap: 8px;
+
+  .card img {
+    // width: 90%;
+    height: 50%;
   }
-  
-  .comment-btn {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  
-  .reservation-btn {
-  
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+
+.for-btn {
+
+  // position: absolute;
+    // left: 50%;
+    padding: 10px;
+    padding-left: 40%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+}
+
+
+.for-btn button {
+  width: fit-content;
+  height: 48;
+  border-radius: 8px;
+  background: rgb(160, 109, 109);
+  border: 1px solid #e0a165;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #6bee67;
+
+}
   
   .text-flex {
     display: flex;
