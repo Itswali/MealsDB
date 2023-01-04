@@ -1,8 +1,6 @@
 const likeButton = document.getElementById('like-button');
 
-// Add a click event listener to the like button
-likeButton.addEventListener('click', () => {
-  // Record the like interaction in the involvement API
+const recordLikeInteraction = () => {
   fetch('API_ENDPOINT', {
     method: 'POST',
     body: JSON.stringify({
@@ -10,11 +8,35 @@ likeButton.addEventListener('click', () => {
       userId: 'USER_ID',
     }),
   });
+};
 
-  // Get the current like count from the screen
-  const likeCountElement = document.getElementById('like-count');
-  const likeCount = parseInt(likeCountElement.innerText, 10);
+const getDataFromAPI = async () => {
+  const response = await fetch('API_ENDPOINT');
+  return response.json();
+};
 
-  // Increment the like count and update the screen
-  likeCountElement.innerText = likeCount + 1;
+async function someFunction() {
+  const data = await getDataFromAPI();
+  // Do something with the data
+}
+
+const displayDataInUI = (data) => {
+  // Get the element to display the data in
+  const dataElement = document.getElementById('data');
+  // Update the element with the data
+  dataElement.innerHTML = data;
+
+  // Use the data to update the UI
+  // You will need to add code here to update the UI with the data
+};
+
+// Add a click event listener to the like button
+likeButton.addEventListener('click', () => {
+  // Record the like interaction in the involvement API
+  recordLikeInteraction();
+
+  // Get the data from the API and display it in the UI
+  getDataFromAPI().then((data) => {
+    displayDataInUI(data);
+  });
 });
