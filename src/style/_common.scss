@@ -7,6 +7,22 @@ main {
   align-items: stretch;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   width: 90%;
+}
+
+.placeholder {
+  width: 300px;
+  height: 250px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
