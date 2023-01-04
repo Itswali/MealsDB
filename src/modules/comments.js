@@ -11,4 +11,12 @@ const addComment = async (baseLink, itemId, userName, comment) => {
     }),
   });
 };
-export default addComment;
+
+const commentCount = async (baseLink, itemId) => {
+  const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
+  const countSpan = document.querySelector(`#${itemId} .comment-count`);
+  await response.json().then((comments) => {
+    countSpan.innerHTML = comments.length;
+  });
+};
+export { addComment, commentCount };
