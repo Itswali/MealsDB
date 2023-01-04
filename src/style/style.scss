@@ -2,25 +2,9 @@
 @import "_common.scss";
 @import "_footer.scss";
 @import "_breakpoints.scss";
+@import "_card.scss";
 
 * {
   text-decoration: none;
   font-family: "poppins", sans-serif;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  // height: 0vh;
-  padding: 50px;
-}
-
-.card {
-  /* Add styles for the cards here */
-  border: 2px solid blue;
-  width: 300px;
-  height: 200px;
-  text-align: center;
-
 }
