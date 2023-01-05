@@ -135,39 +135,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.scss */ \"./src/style/style.scss\");\n/* harmony import */ var _modules_comments_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/comments.js */ \"./src/modules/comments.js\");\n/* harmony import */ var _modules_globals_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/globals.js */ \"./src/modules/globals.js\");\n/* harmony import */ var _modules_like_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/like.js */ \"./src/modules/like.js\");\n/* harmony import */ var _modules_like_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_like_js__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n// import './img/logo.png';\nconst items = document.querySelectorAll('.item');\nwindow.onload = () => {\n  (0,_modules_like_js__WEBPACK_IMPORTED_MODULE_4__.likeCount)(_modules_globals_js__WEBPACK_IMPORTED_MODULE_3__.baseLink);\n  items.forEach((item) => {\n    (0,_modules_comments_js__WEBPACK_IMPORTED_MODULE_2__.commentCount)(_modules_globals_js__WEBPACK_IMPORTED_MODULE_3__.baseLink, item.id);\n  });\n};\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/modules/comments.js":
-/*!*********************************!*\
-  !*** ./src/modules/comments.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addComment\": () => (/* binding */ addComment),\n/* harmony export */   \"commentCount\": () => (/* binding */ commentCount)\n/* harmony export */ });\nconst addComment = async (baseLink, itemId, userName, comment) => {\n  await fetch(`${baseLink}/comments/`, {\n    method: 'POST',\n    headers: {\n      'Content-type': 'application/json; charset=UTF-8',\n    },\n    body: JSON.stringify({\n      item_id: itemId,\n      username: userName,\n      comment,\n    }),\n  });\n};\n\nconst commentCount = async (baseLink, itemId) => {\n  const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);\n  const countSpan = document.querySelector(`#${itemId} .comment-count`);\n  await response.json().then((comments) => {\n    if (comments.length === undefined) {\n      countSpan.innerHTML = '0';\n    } else {\n      countSpan.innerHTML = comments.length;\n    }\n  });\n};\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/comments.js?");
-
-/***/ }),
-
-/***/ "./src/modules/globals.js":
-/*!********************************!*\
-  !*** ./src/modules/globals.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"appId\": () => (/* binding */ appId),\n/* harmony export */   \"baseLink\": () => (/* binding */ baseLink)\n/* harmony export */ });\nconst appId = 'tOCN91ee9YUIaLVBEzto';\nconst baseLink = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}`;\n\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/globals.js?");
-
-/***/ }),
-
-/***/ "./src/modules/like.js":
-/*!*****************************!*\
-  !*** ./src/modules/like.js ***!
-  \*****************************/
-/***/ (() => {
-
-eval("\n\n//# sourceURL=webpack://webpack-demo/./src/modules/like.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.scss */ \"./src/style/style.scss\");\n\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ })
 
