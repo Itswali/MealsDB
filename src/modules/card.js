@@ -23,6 +23,7 @@ const cards = [
     name: 'Pizza Margherita',
     likes: 2,
     comments: ['I could go for a slice of pizza right now'],
+    imageUrl: ['https://media.gettyimages.com/id/157741539/photo/pizza-margherita.jpg?s=170667a&w=gi&k=20&c=0fIdw56EiHt78wN_JGaMiSlrYxC6ZipRvLIzRf1ReX8='],
   },
   {
     name: 'Tomato Soup',
@@ -37,13 +38,18 @@ const cards = [
 ];
 
 cards.forEach((cardData) => {
+  // fetch('')
+  // .then((response) => response.json())
+  // .then((data) => {
+  // cardData.imageUrl = data.imageUrl;
+
   const card = document.createElement('div');
   card.classList.add('card');
 
   const imagePlaceholder = document.createElement('img');
   imagePlaceholder.setAttribute('class', 'image-placeholder');
-  imagePlaceholder.setAttribute('alt', '');
-
+  imagePlaceholder.setAttribute('alt', 'Pizza-Image');
+  imagePlaceholder.src = cardData.source;
   const textFlex = document.createElement('span');
   textFlex.setAttribute('class', 'text-flex');
 
@@ -64,11 +70,6 @@ cards.forEach((cardData) => {
   commentBtn.setAttribute('class', 'comment-btn');
   commentBtn.textContent = 'Comments';
 
-  // commentBtn.addEventListener('click', () => {
-  //   const comments = cardData.comments.map((comment) => `<li>${comment}</li>`).join('');
-  //   alert(`<h2>${cardData.name}</h2><ul>${comments}</ul>`);
-  // });
-
   forBtn.appendChild(commentBtn);
 
   card.appendChild(imagePlaceholder);
@@ -85,7 +86,7 @@ cards.forEach((cardData) => {
     const popUp = document.createElement('div');
     popUp.classList.add('pop-up');
     popUp.innerHTML = `
-      <div class="image-placeholder"></div>
+      <div class="image-placeholder" > <img src="${cardData.source1}" class="pop-up-image" alt="card-image"></div>
       <h2>${cardData.name}</h2>
       <ul>${comments}</ul>
       <button class="exit-btn">Exit</button>
@@ -98,9 +99,8 @@ cards.forEach((cardData) => {
       document.body.classList.remove('pop-up-open');
     });
   });
+  // });
 });
 
 const cardContainer = document.getElementById('card-container');
 cardContainer.appendChild(cardGrid);
-
-// document.body.appendChild(cardGrid);
