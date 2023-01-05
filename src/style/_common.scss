@@ -1,3 +1,16 @@
+$danger: red;
+
+.danger {
+  color: $danger;
+}
+
+.test {
+  border: 2px solid $danger;
+  padding: 24px;
+  display: flex;
+  justify-content: space-around;
+}
+
 main {
   width: 100%;
   min-height: 100vh;
@@ -26,4 +39,16 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
+}
+
+button {
+  padding: 8px;
+}
+
+.comment-count {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
 }
