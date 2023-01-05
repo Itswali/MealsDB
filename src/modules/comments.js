@@ -1,4 +1,6 @@
-const addComment = async (baseLink, itemId, userName, comment) => {
+const addComment = async (baseLink, itemId) => {
+  const user = document.getElementById(`username-${itemId}`);
+  const text = document.getElementById(`user-comment-${itemId}`);
   await fetch(`${baseLink}/comments/`, {
     method: 'POST',
     headers: {
@@ -6,21 +8,45 @@ const addComment = async (baseLink, itemId, userName, comment) => {
     },
     body: JSON.stringify({
       item_id: itemId,
-      username: userName,
-      comment,
+      username: user.value,
+      comment: text.value,
     }),
   });
+  user.value = '';
+  text.value = '';
 };
-
-const commentCount = async (baseLink, itemId) => {
+const renderComment = (arr) => {
+  let comments = '';
+  arr.forEach((obj) => {
+    comments += `<p class="single-comment"><span class="comment-date">${obj.creation_date}</span><br><span class="user-name">${obj.username}:</span> <span class="comment-text">${obj.comment}</span></p>`;
+  });
+  return comments;
+};
+const showComment = async (baseLink, itemId) => {
+  const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
+  const commentShow = document.querySelector(`#${itemId} .show-comments`);
+  await response.json().then((comments) => {
+    commentShow.replaceChildren();
+    commentShow.innerHTML = renderComment(comments);
+  });
+};
+const commentCount = (arr) => {
+  let result = 0;
+  if (arr.length === undefined) {
+    result = 0;
+  } else {
+    result = arr.length;
+  }
+  return result;
+};
+const showCount = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const countSpan = document.querySelector(`#${itemId} .comment-count`);
   await response.json().then((comments) => {
-    if (comments.length === undefined) {
-      countSpan.innerHTML = '0';
-    } else {
-      countSpan.innerHTML = comments.length;
-    }
+    countSpan.replaceChildren();
+    countSpan.innerHTML = commentCount(comments);
   });
 };
-export { addComment, commentCount };
+export {
+  addComment, commentCount, showCount, showComment, renderComment,
+};
