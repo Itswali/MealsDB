@@ -26,6 +26,7 @@ const showComment = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const commentShow = document.querySelector(`#${itemId} .show-comments`);
   await response.json().then((comments) => {
+    commentShow.replaceChildren();
     commentShow.innerHTML = renderComment(comments);
   });
 };
