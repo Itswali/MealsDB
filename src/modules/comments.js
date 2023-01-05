@@ -1,4 +1,6 @@
-const addComment = async (baseLink, itemId, userName, comment) => {
+const addComment = async (baseLink, itemId) => {
+  const user = document.getElementById(`username-${itemId}`);
+  const text = document.getElementById(`user-comment-${itemId}`);
   await fetch(`${baseLink}/comments/`, {
     method: 'POST',
     headers: {
@@ -6,10 +8,12 @@ const addComment = async (baseLink, itemId, userName, comment) => {
     },
     body: JSON.stringify({
       item_id: itemId,
-      username: userName,
-      comment,
+      username: user.value,
+      comment: text.value,
     }),
   });
+  user.value = '';
+  text.value = '';
 };
 const renderComment = (arr) => {
   let comments = '';
@@ -38,6 +42,7 @@ const showCount = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const countSpan = document.querySelector(`#${itemId} .comment-count`);
   await response.json().then((comments) => {
+    countSpan.replaceChildren();
     countSpan.innerHTML = commentCount(comments);
   });
 };
