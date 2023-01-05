@@ -1,5 +1,7 @@
+// const cardGrid = document.querySelector('.middle');
 const cardGrid = document.createElement('div');
 cardGrid.classList.add('card-grid');
+// cardsSection.appendChild(cardGrid);
 
 const cards = [
   {
@@ -74,6 +76,31 @@ cards.forEach((cardData) => {
   card.appendChild(forBtn);
 
   cardGrid.appendChild(card);
+
+  commentBtn.addEventListener('click', () => {
+    document.body.classList.add('pop-up-open');
+
+    const comments = cardData.comments.map((comment) => `<li>${comment}</li>`).join('');
+
+    const popUp = document.createElement('div');
+    popUp.classList.add('pop-up');
+    popUp.innerHTML = `
+      <div class="image-placeholder"></div>
+      <h2>${cardData.name}</h2>
+      <ul>${comments}</ul>
+      <button class="exit-btn">Exit</button>
+    `;
+    document.body.appendChild(popUp);
+
+    const exitBtn = popUp.querySelector('.exit-btn');
+    exitBtn.addEventListener('click', () => {
+      document.body.removeChild(popUp);
+      document.body.classList.remove('pop-up-open');
+    });
+  });
 });
 
-document.body.appendChild(cardGrid);
+const cardContainer = document.getElementById('card-container');
+cardContainer.appendChild(cardGrid);
+
+// document.body.appendChild(cardGrid);
