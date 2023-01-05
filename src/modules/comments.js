@@ -2,9 +2,9 @@ const addComment = async (baseLink, itemId) => {
   const user = document.getElementById(`username-${itemId}`);
   const text = document.getElementById(`user-comment-${itemId}`);
   await fetch(`${baseLink}/comments/`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      'Content-type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify({
       item_id: itemId,
@@ -12,11 +12,11 @@ const addComment = async (baseLink, itemId) => {
       comment: text.value,
     }),
   });
-  user.value = "";
-  text.value = "";
+  user.value = '';
+  text.value = '';
 };
 const renderComment = (arr) => {
-  let comments = "";
+  let comments = '';
   arr.forEach((obj) => {
     comments += `<p class="single-comment"><span class="comment-date">${obj.creation_date}</span><br><span class="user-name">${obj.username}:</span> <span class="comment-text">${obj.comment}</span></p>`;
   });
@@ -47,4 +47,6 @@ const showCount = async (baseLink, itemId) => {
     countSpan.innerHTML = commentCount(comments);
   });
 };
-export { addComment, commentCount, showCount, showComment, renderComment };
+export {
+  addComment, commentCount, showCount, showComment, renderComment,
+};
