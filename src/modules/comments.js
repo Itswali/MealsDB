@@ -48,3 +48,4 @@ const showCount = async (baseLink, itemId) => {
   });
 };
 export { addComment, commentCount, showCount, showComment, renderComment };
+export { addComment, commentCount, showCount, showComment, renderComment };

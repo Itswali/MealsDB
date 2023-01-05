@@ -1,68 +1,37 @@
+import { showComment } from "./comments.js";
+import { baseLink } from "./globals.js";
 // const cardGrid = document.querySelector('.middle');
-const cardGrid = document.createElement('div');
-cardGrid.classList.add('card-grid');
+const cardGrid = document.createElement("div");
+cardGrid.classList.add("card-grid");
 // cardsSection.appendChild(cardGrid);
 
-const cards = [
-  {
-    name: 'VegeTable Salad',
-    likes: 5,
-    comments: ['This looks delicious!', 'I love salads'],
-  },
-  {
-    name: 'Grilled Salmon',
-    likes: 3,
-    comments: ['Yum, I love grilled salmon'],
-  },
-  {
-    name: 'Sushi Platter',
-    likes: 8,
-    comments: ['I love sushi!', 'This looks amazing'],
-  },
-  {
-    name: 'Pizza Margherita',
-    likes: 2,
-    comments: ['I could go for a slice of pizza right now'],
-  },
-  {
-    name: 'Tomato Soup',
-    likes: 7,
-    comments: ['This looks like the perfect comfort food'],
-  },
-  {
-    name: 'Chocolate Cake',
-    likes: 10,
-    comments: ['I have a sweet tooth and this looks like it will hit the spot'],
-  },
-];
-
 cards.forEach((cardData) => {
-  const card = document.createElement('div');
-  card.classList.add('card');
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.id = cardData.idMeal;
+  const imagePlaceholder = document.createElement("img");
+  imagePlaceholder.setAttribute("class", "image-placeholder");
+  imagePlaceholder.setAttribute("alt", "");
+  imagePlaceholder.setAttribute("src", `${cardData.strMealThumb}`);
+  const textFlex = document.createElement("span");
+  textFlex.setAttribute("class", "text-flex");
 
-  const imagePlaceholder = document.createElement('img');
-  imagePlaceholder.setAttribute('class', 'image-placeholder');
-  imagePlaceholder.setAttribute('alt', '');
+  const p = document.createElement("p");
+  p.textContent = cardData.strMeal;
 
-  const textFlex = document.createElement('span');
-  textFlex.setAttribute('class', 'text-flex');
-
-  const p = document.createElement('p');
-  p.textContent = cardData.name;
-
-  const forHeart = document.createElement('span');
-  forHeart.setAttribute('class', 'for-heart');
-  forHeart.innerHTML = `&#x2764; <i>${cardData.likes} likes</i>`;
+  const forHeart = document.createElement("span");
+  forHeart.setAttribute("class", "for-heart");
+  forHeart.innerHTML = `&#x2764; <i><span class="like-count"></span> likes</i>`;
 
   textFlex.appendChild(p);
   textFlex.appendChild(forHeart);
 
-  const forBtn = document.createElement('span');
-  forBtn.setAttribute('class', 'for-btn');
+  const forBtn = document.createElement("span");
+  forBtn.setAttribute("class", "for-btn");
 
-  const commentBtn = document.createElement('button');
-  commentBtn.setAttribute('class', 'comment-btn');
-  commentBtn.textContent = 'Comments';
+  const commentBtn = document.createElement("button");
+  commentBtn.setAttribute("class", "comment-btn");
+  commentBtn.textContent = "Comments";
 
   // commentBtn.addEventListener('click', () => {
   //   const comments = cardData.comments.map((comment) => `<li>${comment}</li>`).join('');
@@ -77,30 +46,28 @@ cards.forEach((cardData) => {
 
   cardGrid.appendChild(card);
 
-  commentBtn.addEventListener('click', () => {
-    document.body.classList.add('pop-up-open');
+  commentBtn.addEventListener("click", () => {
+    document.body.classList.add("pop-up-open");
 
-    const comments = cardData.comments.map((comment) => `<li>${comment}</li>`).join('');
-
-    const popUp = document.createElement('div');
-    popUp.classList.add('pop-up');
+    const popUp = document.createElement("div");
+    popUp.classList.add("pop-up");
     popUp.innerHTML = `
-      <div class="image-placeholder"></div>
-      <h2>${cardData.name}</h2>
-      <ul>${comments}</ul>
+      <img class="image-placeholder" src='${cardData.strMealThumb}' alt='${cardData.strMeal}'/>
+      <h2>${cardData.strMeal}</h2>
+      <div class="show-comments"></ul>
       <button class="exit-btn">Exit</button>
     `;
     document.body.appendChild(popUp);
-
-    const exitBtn = popUp.querySelector('.exit-btn');
-    exitBtn.addEventListener('click', () => {
+    showComment(baseLink, cardData.idMeal);
+    const exitBtn = popUp.querySelector(".exit-btn");
+    exitBtn.addEventListener("click", () => {
       document.body.removeChild(popUp);
-      document.body.classList.remove('pop-up-open');
+      document.body.classList.remove("pop-up-open");
     });
   });
 });
 
-const cardContainer = document.getElementById('card-container');
+const cardContainer = document.getElementById("card-container");
 cardContainer.appendChild(cardGrid);
 
 // document.body.appendChild(cardGrid);
