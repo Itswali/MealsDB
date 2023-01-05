@@ -11,7 +11,20 @@ const addComment = async (baseLink, itemId, userName, comment) => {
     }),
   });
 };
-
+const renderComment = (arr) => {
+  let comments = '';
+  arr.forEach((obj) => {
+    comments += `<p class="single-comment"><span class="comment-date">${obj.creation_date}</span><br><span class="user-name">${obj.username}:</span> <span class="comment-text">${obj.comment}</span></p>`;
+  });
+  return comments;
+};
+const showComment = async (baseLink, itemId) => {
+  const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
+  const commentShow = document.querySelector(`#${itemId} .show-comments`);
+  await response.json().then((comments) => {
+    commentShow.innerHTML = renderComment(comments);
+  });
+};
 const commentCount = (arr) => {
   let result = 0;
   if (arr.length === undefined) {
@@ -28,4 +41,6 @@ const showCount = async (baseLink, itemId) => {
     countSpan.innerHTML = commentCount(comments);
   });
 };
-export { addComment, commentCount, showCount };
+export {
+  addComment, commentCount, showCount, showComment, renderComment,
+};
