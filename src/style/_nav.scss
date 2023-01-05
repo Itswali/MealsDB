@@ -8,9 +8,18 @@
 }
 
 .logo {
-  margin-left: 8%;
-  border-radius: 20px;
-  width: 80px;
+  // margin-left: 8%;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgb(73, 73, 73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(214, 214, 214);
+  background: rgb(165, 164, 164);
+  box-shadow: 2px 4px 8px gray;
+  font-size: 40px;
 }
 
 .for-logo-img {
@@ -22,12 +31,23 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
-  margin-right: 10%;
+  // margin-right: 10%;
   padding: 2px;
+
+  a {
+    color: rgb(214, 130, 130);
+    font-size: 28px;
+    font-weight: 800;
+    display: flex;
+  }
 }
 
-.nav-links a {
-  color: rgb(214, 130, 130);
-  font-size: 28px;
-  font-weight: 800;
+.meal-count {
+  font-size: 18px;
+  height: max-content;
+  padding: 4px;
+  margin-left: 4px;
+  background: rgb(214, 130, 130);
+  color: white;
+  border-radius: 8px;
 }

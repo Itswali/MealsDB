@@ -9,49 +9,81 @@
   border-radius: 4px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
+  overflow-y: scroll;
+
   .image-placeholder {
     width: 100%;
-    height: 500px;
-    border: 1px solid blue;
+    aspect-ratio: 5/3;
+    border: none;
     background-color: #eee;
     object-fit: cover;
     object-position: center;
   }
+
   h2 {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
   }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
     li {
       margin: 8px 0;
       font-size: 18px;
     }
   }
-  .exit-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    color: #e74c3c;
-    &:hover {
-      color: #c0392b;
-    }
+}
+
+.pop-up-bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(212, 212, 212, 0.5);
+}
+
+.exit-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 16px;
+  right: 36px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+  border-radius: 50%;
+  transition: all 500ms ease;
+
+  &:hover {
+    color: white;
+    background-color: rgb(30, 30, 30);
   }
 }
 
-.pop-up-open {
-  .blur {
-    mix-blend-mode: multiply;
-    backdrop-filter: blur(5px);
-  }
+.comments-heading {
+  width: max-content;
+  padding: 12px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
+
+.comments-count {
+  color: rgb(30, 30, 30);
+  background-color: white;
+  line-height: 1;
+  padding: 2px 8px;
+  border-radius: 25%;
 }

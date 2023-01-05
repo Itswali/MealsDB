@@ -6,7 +6,6 @@
     <title>Capstone Project</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style/style.scss" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -15,30 +14,33 @@
       src="https://kit.fontawesome.com/c488aa6c77.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="runtime.main.js"></script>
-    <script defer src="main.main.js"></script>
-  </head>
+  <script defer src="runtime.main.js"></script><script defer src="main.main.js"></script></head>
 
   <body>
     <main>
       <header>
-        <nav class="header-nav">
-          <a href="#" class="logo"
-            ><img
-              class="logo"
-              src="https://cdn.logojoy.com/wp-content/uploads/2018/05/01105857/1553.png"
-              alt="LOGO"
-          /></a>
+        <div class="container">
+          <nav class="header-nav">
+            <a href="/" class="logo"><i class="fa-solid fa-utensils"></i></a>
 
-          <span class="nav-links">
-            <a href="#">Recipes</a>
-            <a href="#">Dishes</a>
-            <a href="#">Category</a>
-          </span>
-        </nav>
+            <span class="nav-links">
+              <a id="cat-beef" href="#"
+                >Beef <span class="meal-count"></span
+              ></a>
+              <a id="cat-seafood" href="#"
+                >Seafood <span class="meal-count"></span
+              ></a>
+              <a id="cat-dessert" href="#"
+                >Dessert <span class="meal-count"></span
+              ></a>
+            </span>
+          </nav>
+        </div>
       </header>
+      <section>
+        <div id="card-container" class="container"></div>
+      </section>
 
-      <div id="card-container"></div>
       <!-- <section>
       <div class="container">
         <div id="item123" class="item">
@@ -78,7 +80,5 @@
 
     <!-- <div class="modal-container hide"> -->
     <!-- </div> -->
-
-    <script src="index.js" async defer></script>
   </body>
 </html>
