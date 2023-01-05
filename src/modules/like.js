@@ -9,7 +9,6 @@ const itemLike = async (baseLink, itemId) => {
     }),
   });
 };
-
 const likeCount = async (baseLink) => {
   const likeEntries = await fetch(`${baseLink}/likes`);
   const items = document.querySelectorAll(".item");
@@ -24,5 +23,4 @@ const likeCount = async (baseLink) => {
     });
   });
 };
-
 export { itemLike, likeCount };
