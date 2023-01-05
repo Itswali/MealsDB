@@ -6,6 +6,7 @@
     <title>Capstone Project</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style/style.scss" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -15,13 +16,18 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <main>
       <header>
         <nav class="header-nav">
-          <span class="logo"
-            ><a href="#"><img src="#" alt="LOGO" /></a>
-          </span>
+          <a href="#" class="logo"
+            ><img
+              class="logo"
+              src="https://cdn.logojoy.com/wp-content/uploads/2018/05/01105857/1553.png"
+              alt="LOGO"
+          /></a>
+
           <span class="nav-links">
             <a href="#">Recipes</a>
             <a href="#">Dishes</a>
@@ -30,7 +36,18 @@
         </nav>
       </header>
 
+      <div id="card-container"></div>
+      <!-- <section>
+      <div class="container">
+        <div id="item123" class="item">
+          <div class="placeholder">Placeholder</div>
+          <span class="like-count"></span><i class="fa-solid fa-thumbs-up item-like"></i>
+        </div>
+      </div>
+    </section> -->
+
       <footer>
+        <br /><br />
         <div class="container">
           Created by
           <a
@@ -56,5 +73,10 @@
         </div>
       </footer>
     </main>
+
+    <!-- <div class="modal-container hide"> -->
+    <!-- </div> -->
+
+    <script src="index.js" async defer></script>
   </body>
 </html>
