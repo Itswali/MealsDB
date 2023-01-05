@@ -1,3 +1,4 @@
 import 'lodash';
 import './style/style.scss';
-// import './img/logo.png';
+import './modules/card.js';
+import './modules/pop.js';
