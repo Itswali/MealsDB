@@ -1,8 +1,8 @@
 const itemLike = async (baseLink, itemId) => {
   await fetch(`${baseLink}/likes/`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      'Content-type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify({
       item_id: itemId,
@@ -11,7 +11,7 @@ const itemLike = async (baseLink, itemId) => {
 };
 const likeCount = async (baseLink) => {
   const likeEntries = await fetch(`${baseLink}/likes`);
-  const items = document.querySelectorAll(".item");
+  const items = document.querySelectorAll('.item');
   await likeEntries.json().then((likes) => {
     items.forEach((item) => {
       const likeCounter = document.querySelector(`#${item.id} .like-count`);
