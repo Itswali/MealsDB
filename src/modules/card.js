@@ -112,7 +112,6 @@ const renderCards = (arr) => {
       submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
         addComment(baseLink, cardData.idMeal);
-        //   commentForm.reset();
         setTimeout(() => {
           showComment(baseLink, cardData.idMeal);
           showCount(baseLink, cardData.idMeal);

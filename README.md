@@ -149,7 +149,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## Live Link:
 
-- https://Itswali.github.io/capstoneProject2/dist/
+- https://Itswali.github.io/capstoneProject2/
 
 ## Show your support
 
