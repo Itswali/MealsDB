@@ -26,9 +26,9 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 [Capstone-Project 2] <a name="Capstone-Project"></a>
+# 📖 Your Meal finder <a name="Capstone-Project"></a>
 
-**[Capstone-Project 2]** is a program that fetch data from an API and shows them in a webpage and allows the user to interact (like, comment, etc.) trhough another API
+**Your Meal finder** is a program that fetch data from an API and shows them in a webpage and allows the user to interact (like, comment, etc.) trhough another API
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -135,7 +135,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Will add further testing functions.]**
+- [ ] **[Will add form validation and some other event listeners]**
 
 - <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

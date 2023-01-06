@@ -1,4 +1,4 @@
-const mealsCountTest = (arr) => {
+const commentCount = (arr) => {
   let result = 0;
   if (arr.length === undefined) {
     result = 0;
@@ -7,4 +7,4 @@ const mealsCountTest = (arr) => {
   }
   return result;
 };
-export default mealsCountTest;
+export default commentCount;
