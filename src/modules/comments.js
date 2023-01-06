@@ -1,3 +1,5 @@
+import commentCount from './commentcount.js';
+
 const addComment = async (baseLink, itemId) => {
   const user = document.getElementById(`username-${itemId}`);
   const text = document.getElementById(`user-comment-${itemId}`);
@@ -33,15 +35,7 @@ const showComment = async (baseLink, itemId) => {
     commentShow.innerHTML = renderComment(comments);
   });
 };
-const commentCount = (arr) => {
-  let result = 0;
-  if (arr.length === undefined) {
-    result = 0;
-  } else {
-    result = arr.length;
-  }
-  return result;
-};
+
 const showCount = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const countSpan = document.getElementById(`#comment-count-${itemId}`);
@@ -51,5 +45,5 @@ const showCount = async (baseLink, itemId) => {
   });
 };
 export {
-  addComment, commentCount, showCount, showComment, renderComment,
+  addComment, showCount, showComment, renderComment,
 };

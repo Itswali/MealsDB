@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import mealsCountTest from './test-itemcount.js';
+import mealsCount from '../modules/itemcount.js';
 
 const mockData = [
   {
@@ -34,6 +34,6 @@ const mockData = [
 
 describe('We are', () => {
   test('testing commentCount function', () => {
-    expect(mealsCountTest(mockData)).toBe(5);
+    expect(mealsCount(mockData)).toBe(5);
   });
 });

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { commentCount } from '../modules/comments.js';
+import commentCount from '../modules/commentcount.js';
 
 const mockData = [
   {
