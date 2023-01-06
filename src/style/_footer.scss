@@ -5,7 +5,16 @@ footer {
 
   .container {
     padding: 16px;
-    border: 2px solid black;
+    border: none;
     margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: #09568a;
+    color: white;
+    text-align: center;
+
+    a {
+      color: white;
+      font-weight: bold;
+    }
   }
 }

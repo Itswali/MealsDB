@@ -1,8 +1,6 @@
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  // margin-left: 5%;
-  // margin-right: 5%;
+  grid-template-columns: 1fr;
   padding: 20px;
   column-gap: 24px;
 }

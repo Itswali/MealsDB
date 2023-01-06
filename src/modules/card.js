@@ -1,11 +1,11 @@
 import { addComment, showComment, showCount } from './comments.js';
 import { baseLink } from './globals.js';
 import { itemLike, likeCount } from './like.js';
-// const cardGrid = document.querySelector('.middle');
+
 const cardGrid = document.createElement('div');
 cardGrid.classList.add('card-grid');
 cardGrid.id = 'show-case';
-// cardsSection.appendChild(cardGrid);
+
 const renderCards = (arr) => {
   arr.forEach((cardData) => {
     const card = document.createElement('div');
@@ -48,11 +48,6 @@ const renderCards = (arr) => {
     const commentBtn = document.createElement('button');
     commentBtn.setAttribute('class', 'comment-btn');
     commentBtn.textContent = 'Comments';
-
-    // commentBtn.addEventListener('click', () => {
-    //   const comments = cardData.comments.map((comment) => `<li>${comment}</li>`).join('');
-    //   alert(`<h2>${cardData.name}</h2><ul>${comments}</ul>`);
-    // });
 
     forBtn.appendChild(commentBtn);
 
@@ -130,6 +125,4 @@ const renderCards = (arr) => {
 
 const cardContainer = document.getElementById('card-container');
 cardContainer.appendChild(cardGrid);
-
-// document.body.appendChild(cardGrid);
 export default renderCards;
