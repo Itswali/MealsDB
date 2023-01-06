@@ -11,6 +11,12 @@ $danger: red;
   justify-content: space-around;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 main {
   width: 100%;
   min-height: 100vh;
@@ -29,7 +35,7 @@ section {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
 }
 
 .placeholder {
@@ -65,4 +71,28 @@ button {
 .comment-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  input,
+  textarea {
+    width: 80%;
+    min-height: 36px;
+    padding: 8px;
+
+    &::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  .submit-btn {
+    width: 50%;
+    min-width: 150px;
+    background-color: #167ec3;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+  }
 }

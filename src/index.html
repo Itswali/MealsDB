@@ -6,7 +6,6 @@
     <title>Capstone Project</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style/style.scss" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -20,31 +19,38 @@
   <body>
     <main>
       <header>
-        <nav class="header-nav">
-          <a href="#" class="logo"
-            ><img
-              class="logo"
-              src="https://cdn.logojoy.com/wp-content/uploads/2018/05/01105857/1553.png"
-              alt="LOGO"
-          /></a>
+        <div class="container">
+          <nav class="header-nav">
+            <a href="/" class="logo"><i class="fa-solid fa-utensils"></i></a>
 
-          <span class="nav-links">
-            <a href="#">Recipes</a>
-            <a href="#">Dishes</a>
-            <a href="#">Category</a>
-          </span>
-        </nav>
-      </header>
-
-      <div id="card-container"></div>
-      <!-- <section>
-      <div class="container">
-        <div id="item123" class="item">
-          <div class="placeholder">Placeholder</div>
-          <span class="like-count"></span><i class="fa-solid fa-thumbs-up item-like"></i>
+            <ul class="nav-links main-menu">
+              <li class="nav-item">
+                <a id="cat-beef" href="#" class="nav-link"
+                  >Beef <span class="meal-count"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a id="cat-seafood" href="#" class="nav-link"
+                  >Seafood <span class="meal-count"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a id="cat-dessert" href="#" class="nav-link"
+                  >Dessert <span class="meal-count"></span
+                ></a>
+              </li>
+            </ul>
+            <div class="menu-ico">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
         </div>
-      </div>
-    </section> -->
+      </header>
+      <section>
+        <div id="card-container" class="container"></div>
+      </section>
 
       <footer>
         <br /><br />
@@ -76,7 +82,5 @@
 
     <!-- <div class="modal-container hide"> -->
     <!-- </div> -->
-
-    <script src="index.js" async defer></script>
   </body>
 </html>

@@ -11,10 +11,10 @@ const itemLike = async (baseLink, itemId) => {
 };
 const likeCount = async (baseLink) => {
   const likeEntries = await fetch(`${baseLink}/likes`);
-  const items = document.querySelectorAll('.item');
+  const items = document.querySelectorAll('.card');
   await likeEntries.json().then((likes) => {
     items.forEach((item) => {
-      const likeCounter = document.querySelector(`#${item.id} .like-count`);
+      const likeCounter = document.getElementById(`like-count${item.id}`);
       likes.forEach((like) => {
         if (item.id === like.item_id) {
           likeCounter.innerHTML = `${like.likes}`;
