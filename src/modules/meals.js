@@ -12,6 +12,7 @@ const showMeals = async (category) => {
   });
   likeCount(baseLink);
 };
+
 const mealsCount = (arr) => {
   let result = 0;
   if (arr.length === undefined) {
@@ -21,6 +22,7 @@ const mealsCount = (arr) => {
   }
   return result;
 };
+
 const countMeals = async (category, menuItem) => {
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`,
