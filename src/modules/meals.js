@@ -30,4 +30,4 @@ const countMeals = async (category, menuItem) => {
     menuItem.childNodes[1].innerText = mealsCount(foods);
   });
 };
-export { showMeals, countMeals };
+export { showMeals, countMeals, mealsCount };
