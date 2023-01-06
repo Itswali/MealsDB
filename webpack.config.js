@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[name].main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   module: {
@@ -29,7 +29,7 @@ module.exports = {
     ],
   },
   devServer: {
-    static: './dist',
+    static: './docs',
   },
   optimization: {
     runtimeChunk: 'single',

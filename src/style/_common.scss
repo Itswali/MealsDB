@@ -7,6 +7,14 @@ $danger: red;
 .test {
   border: 2px solid $danger;
   padding: 24px;
+  display: flex;
+  justify-content: space-around;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -23,10 +31,11 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .container {
-  width: 90%;
+  width: 95%;
 }
 
 .placeholder {
@@ -43,9 +52,47 @@ button {
   padding: 8px;
 }
 
+.user-name {
+  font-weight: bold;
+}
+
+.comment-date {
+  font-size: small;
+  font-style: italic;
+}
+
 .comment-count {
   padding: 2px 4px;
   border-radius: 4px;
   background-color: black;
   color: white;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input,
+  textarea {
+    width: 80%;
+    min-height: 36px;
+    padding: 8px;
+
+    &::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  .submit-btn {
+    width: 50%;
+    min-width: 150px;
+    background-color: #167ec3;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+  }
 }

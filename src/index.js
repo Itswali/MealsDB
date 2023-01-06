@@ -1,12 +1,17 @@
 import 'lodash';
 import './style/style.scss';
-import { showCount } from './modules/comments.js';
-import { baseLink } from './modules/globals.js';
-// import './img/logo.png';
+import { showMeals, countMeals } from './modules/meals.js';
+import navigation from './modules/nav.js';
+import { catBeef, catSeafood, catDessert } from './modules/globals.js';
 
-const items = document.querySelectorAll('.item');
 window.onload = () => {
-  items.forEach((item) => {
-    showCount(baseLink, item.id);
-  });
+  showMeals('Beef');
+
+  countMeals('Beef', catBeef);
+
+  catSeafood.childNodes[1].style.visibility = 'hidden';
+
+  catDessert.childNodes[1].style.visibility = 'hidden';
+
+  navigation();
 };

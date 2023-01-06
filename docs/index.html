@@ -15,34 +15,45 @@
       crossorigin="anonymous"
     ></script>
   <script defer src="runtime.main.js"></script><script defer src="main.main.js"></script></head>
+
   <body>
     <main>
       <header>
-        <nav class="header-nav">
-          <span class="logo"
-            ><a href="#"><img src="#" alt="LOGO" /></a>
-          </span>
-          <span class="nav-links">
-            <a href="#">Recipes</a>
-            <a href="#">Dishes</a>
-            <a href="#">Category</a>
-          </span>
-        </nav>
+        <div class="container">
+          <nav class="header-nav">
+            <a href="/" class="logo"><i class="fa-solid fa-utensils"></i></a>
+
+            <ul class="nav-links main-menu">
+              <li class="nav-item">
+                <a id="cat-beef" href="#" class="nav-link"
+                  >Beef <span class="meal-count"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a id="cat-seafood" href="#" class="nav-link"
+                  >Seafood <span class="meal-count"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a id="cat-dessert" href="#" class="nav-link"
+                  >Dessert <span class="meal-count"></span
+                ></a>
+              </li>
+            </ul>
+            <div class="menu-ico">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+        </div>
       </header>
       <section>
-        <div class="container test">
-          <h2 class="danger">
-            This part is for test purpose. We'll remove this part at the end.
-          </h2>
-          <div id="item123" class="item">
-            <div class="placeholder">Placeholder</div>
-            <span class="like-count"></span
-            ><i class="fa-solid fa-thumbs-up item-like"></i>
-            <button>Comment <span class="comment-count"></span></button>
-          </div>
-        </div>
+        <div id="card-container" class="container"></div>
       </section>
+
       <footer>
+        <br /><br />
         <div class="container">
           Created by
           <a
@@ -68,5 +79,8 @@
         </div>
       </footer>
     </main>
+
+    <!-- <div class="modal-container hide"> -->
+    <!-- </div> -->
   </body>
 </html>

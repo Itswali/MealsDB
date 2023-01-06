@@ -26,13 +26,12 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 [Capstone-Project] <a name="Capstone-Project"></a>
+# 📖 [Capstone-Project 2] <a name="Capstone-Project"></a>
 
-**[to-do-list]** is a program that allows the user to add and remove differen tasks and mark them completed
+**[Capstone-Project 2]** is a program that fetch data from an API and shows them in a webpage and allows the user to interact (like, comment, etc.) trhough another API
 
 ## 🛠 Built With <a name="built-with"></a>
 
-- Major languages
 - HTML
 - CSS
 - Javascript
@@ -40,39 +39,25 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://github.com/">Github</a></li>
   </ul>
 </details>
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add a task]**
+- **Show contents from an external API**
 
-- **[Remove a task]**
+- **Like the items**
 
-- **[Mark a task as completed]**
+- **Make comments**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://Itswali.github.io/capstoneProject2/dist)
+- [Live Demo Link](https://Itswali.github.io/capstoneProject2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,17 +77,35 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
+```sh
+  npm install
+```
+
 ### Usage
 
 To run the project, execute the following command:
+
+```sh
+  npm start
+```
+
+To to build for the production, execute the following command:
+
+```sh
+  npm run build
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
+```sh
+  npm test
+```
+
 ### Deployment
 
-You can deploy this project using:
+You can deploy this project using [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,13 +163,13 @@ Feel free to check the [issues page](../../issues/).
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **[Question_1]**
+- **What is this project?**
 
-  - [Answer_1]
+  - It's a capstone project of micoverse curriculam.
 
-- **[Question_2]**
+- **Is there any SQL database for this site**
 
-  - [Answer_2]
+  - No, there isn't. However, we used APIs to pull content and interact with the content.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
