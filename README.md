@@ -118,9 +118,9 @@ You can deploy this project using:
 
 👤 **Wali Muhammad**
 
-- GitHub: [@](https://github.com/Itswali)
-- Twitter: [@](https://twitter.com/WaliMuh94818599)
-- LinkedIn: [@](https://www.linkedin.com/in/wali-muhammad-666040244/)
+- GitHub: [@Itswali](https://github.com/Itswali)
+- Twitter: [@Wali-Muhammad](https://twitter.com/WaliMuh94818599)
+- LinkedIn: [@Wali Muhammad](https://www.linkedin.com/in/wali-muhammad-666040244/)
 
   👤 **Utsargo Roy**
 
