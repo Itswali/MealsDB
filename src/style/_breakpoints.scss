@@ -1,0 +1,45 @@
+@media screen and (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 20px;
+    column-gap: 24px;
+  }
+
+  .menu-ico {
+    display: none;
+  }
+
+  .main-menu {
+    position: relative !important;
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    text-align: right !important;
+    transition: 0.3s;
+    align-items: center !important;
+    z-index: 999;
+    list-style-type: none;
+    justify-content: flex-end;
+    right: 0 !important;
+    background: transparent !important;
+    top: 0 !important;
+    height: auto !important;
+  }
+
+  .pop-up {
+    width: 50% !important;
+    height: 90% !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
