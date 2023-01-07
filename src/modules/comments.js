@@ -29,9 +29,8 @@ const renderComment = (arr) => {
 };
 const showComment = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
-  const commentShow = document.querySelector(`#pop-${itemId} .show-comments`);
+  const commentShow = document.querySelector(`#show-comments-${itemId}`);
   await response.json().then((comments) => {
-    commentShow.replaceChildren();
     commentShow.innerHTML = renderComment(comments);
   });
 };
@@ -40,7 +39,6 @@ const showCount = async (baseLink, itemId) => {
   const response = await fetch(`${baseLink}/comments?item_id=${itemId}`);
   const countSpan = document.getElementById(`#comment-count-${itemId}`);
   await response.json().then((comments) => {
-    countSpan.replaceChildren();
     countSpan.innerHTML = commentCount(comments);
   });
 };

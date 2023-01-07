@@ -49,6 +49,23 @@
         </div>
       </header>
       <section>
+        <div class="container" id="search">
+          <form class="search-form" id="search-form" name="search-form">
+            <input
+              type="text"
+              placeholder="Search your food"
+              name="search"
+              id="search-input"
+            />
+            <button type="submit" id="search-btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+
+          <h2 id="search-count-heading">
+            Found <span id="search-count"></span> items
+          </h2>
+        </div>
         <div id="card-container" class="container"></div>
       </section>
 

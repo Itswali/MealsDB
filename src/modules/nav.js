@@ -3,6 +3,7 @@ import {
   catBeef,
   catDessert,
   catSeafood,
+  catUrl,
   menuIco,
   navMenu,
 } from './globals.js';
@@ -11,8 +12,8 @@ const navigation = () => {
   const cards = document.getElementById('show-case');
   catBeef.addEventListener('click', () => {
     cards.replaceChildren();
-    showMeals('Beef');
-    countMeals('Beef', catBeef);
+    showMeals(catUrl, 'Beef');
+    countMeals(catUrl, 'Beef', catBeef);
     catBeef.childNodes[1].style.visibility = 'visible';
     catSeafood.childNodes[1].innerText = '';
     catSeafood.childNodes[1].style.visibility = 'hidden';
@@ -21,8 +22,8 @@ const navigation = () => {
   });
   catSeafood.addEventListener('click', () => {
     cards.replaceChildren();
-    showMeals('Seafood');
-    countMeals('Seafood', catSeafood);
+    showMeals(catUrl, 'Seafood');
+    countMeals(catUrl, 'Seafood', catSeafood);
     catSeafood.childNodes[1].style.visibility = 'visible';
     catBeef.childNodes[1].innerText = '';
     catBeef.childNodes[1].style.visibility = 'hidden';
@@ -31,8 +32,8 @@ const navigation = () => {
   });
   catDessert.addEventListener('click', () => {
     cards.replaceChildren();
-    showMeals('Dessert');
-    countMeals('Dessert', catDessert);
+    showMeals(catUrl, 'Dessert');
+    countMeals(catUrl, 'Dessert', catDessert);
     catDessert.childNodes[1].style.visibility = 'visible';
     catBeef.childNodes[1].innerText = '';
     catBeef.childNodes[1].style.visibility = 'hidden';
