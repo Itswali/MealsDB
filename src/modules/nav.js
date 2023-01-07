@@ -6,11 +6,13 @@ import {
   catUrl,
   menuIco,
   navMenu,
+  searchCountHeading,
 } from './globals.js';
 
 const navigation = () => {
   const cards = document.getElementById('show-case');
   catBeef.addEventListener('click', () => {
+    searchCountHeading.style.visibility = 'hidden';
     cards.replaceChildren();
     showMeals(catUrl, 'Beef');
     countMeals(catUrl, 'Beef', catBeef.childNodes[1]);
@@ -21,6 +23,7 @@ const navigation = () => {
     catDessert.childNodes[1].style.visibility = 'hidden';
   });
   catSeafood.addEventListener('click', () => {
+    searchCountHeading.style.visibility = 'hidden';
     cards.replaceChildren();
     showMeals(catUrl, 'Seafood');
     countMeals(catUrl, 'Seafood', catSeafood.childNodes[1]);
@@ -31,6 +34,7 @@ const navigation = () => {
     catDessert.childNodes[1].style.visibility = 'hidden';
   });
   catDessert.addEventListener('click', () => {
+    searchCountHeading.style.visibility = 'hidden';
     cards.replaceChildren();
     showMeals(catUrl, 'Dessert');
     countMeals(catUrl, 'Dessert', catDessert.childNodes[1]);
