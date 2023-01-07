@@ -1,5 +1,3 @@
-# (Link to Kanban Board) - https://github.com/Itswali/capstoneProject2/projects/3
-
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
