@@ -15,7 +15,7 @@ import searchMeals from './modules/search.js';
 window.onload = () => {
   showMeals(catUrl, 'Beef');
 
-  countMeals(catUrl, 'Beef', catBeef);
+  countMeals(catUrl, 'Beef', catBeef.childNodes[1]);
 
   catSeafood.childNodes[1].style.visibility = 'hidden';
 
