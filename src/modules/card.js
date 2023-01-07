@@ -1,6 +1,7 @@
 import { addComment, showComment, showCount } from './comments.js';
 import { baseLink } from './globals.js';
 import { itemLike, likeCount } from './like.js';
+import mealsRecipe from './recipe.js';
 
 const cardGrid = document.createElement('div');
 cardGrid.classList.add('card-grid');
@@ -67,10 +68,22 @@ const renderCards = (arr) => {
       popUp.innerHTML = `
         <img class="image-placeholder" src='${cardData.strMealThumb}' alt='${cardData.strMeal}'/>
         <h2>${cardData.strMeal}</h2>
-        <h3 class="comments-heading">Comments <span class="comments-count" id="#comment-count-${cardData.idMeal}"></span></h3>
-        <div class="show-comments"></ul>
+        <h3 class="recipe-heading">Recipe</h4>
         `;
-
+      const recipe = document.createElement('p');
+      recipe.id = `recipe-${cardData.idMeal}`;
+      popUp.appendChild(recipe);
+      setTimeout(() => {
+        mealsRecipe(cardData.idMeal, recipe);
+      }, 1000);
+      const commentHeading = document.createElement('h3');
+      commentHeading.classList.add('comments-heading');
+      commentHeading.innerHTML = `Comments <span class="comments-count" id="#comment-count-${cardData.idMeal}"></span>`;
+      popUp.appendChild(commentHeading);
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('show-comments');
+      commentDiv.id = `show-comments-${cardData.idMeal}`;
+      popUp.appendChild(commentDiv);
       const exitBtn = document.createElement('button');
       exitBtn.classList.add('exit-btn');
       exitBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
@@ -105,7 +118,10 @@ const renderCards = (arr) => {
         document.body.removeChild(popUpBg);
         document.body.classList.remove('pop-up-open');
       });
-      showComment(baseLink, cardData.idMeal);
+
+      setTimeout(() => {
+        showComment(baseLink, cardData.idMeal);
+      }, 1000);
       const submitBtn = document.getElementById(
         `submit-btn-${cardData.idMeal}`,
       );

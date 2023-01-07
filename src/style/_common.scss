@@ -96,3 +96,28 @@ button {
     font-weight: bold;
   }
 }
+
+#search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  background: lightgrey;
+
+  input {
+    width: 80%;
+    border: none;
+    background: white;
+    padding-left: 8px;
+  }
+
+  button {
+    border: none;
+  }
+}
