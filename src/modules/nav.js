@@ -13,7 +13,7 @@ const navigation = () => {
   catBeef.addEventListener('click', () => {
     cards.replaceChildren();
     showMeals(catUrl, 'Beef');
-    countMeals(catUrl, 'Beef', catBeef);
+    countMeals(catUrl, 'Beef', catBeef.childNodes[1]);
     catBeef.childNodes[1].style.visibility = 'visible';
     catSeafood.childNodes[1].innerText = '';
     catSeafood.childNodes[1].style.visibility = 'hidden';
@@ -23,7 +23,7 @@ const navigation = () => {
   catSeafood.addEventListener('click', () => {
     cards.replaceChildren();
     showMeals(catUrl, 'Seafood');
-    countMeals(catUrl, 'Seafood', catSeafood);
+    countMeals(catUrl, 'Seafood', catSeafood.childNodes[1]);
     catSeafood.childNodes[1].style.visibility = 'visible';
     catBeef.childNodes[1].innerText = '';
     catBeef.childNodes[1].style.visibility = 'hidden';
@@ -33,7 +33,7 @@ const navigation = () => {
   catDessert.addEventListener('click', () => {
     cards.replaceChildren();
     showMeals(catUrl, 'Dessert');
-    countMeals(catUrl, 'Dessert', catDessert);
+    countMeals(catUrl, 'Dessert', catDessert.childNodes[1]);
     catDessert.childNodes[1].style.visibility = 'visible';
     catBeef.childNodes[1].innerText = '';
     catBeef.childNodes[1].style.visibility = 'hidden';

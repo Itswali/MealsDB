@@ -15,7 +15,7 @@ const countMeals = async (url, term, element) => {
   const response = await fetch(`${url}${term}`);
   await response.json().then((food) => {
     const foods = food.meals;
-    element.childNodes[1].innerText = mealsCount(foods);
+    element.innerText = mealsCount(foods);
   });
 };
 export { showMeals, countMeals };
