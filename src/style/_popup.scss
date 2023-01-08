@@ -6,8 +6,10 @@
   gap: 4px;
 
   li {
-    padding: 8px;
+    padding: 4px 8px;
     background: lightgray;
+    font-size: 14px !important;
+    border-radius: 4px;
   }
 }
 
@@ -16,7 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 80%;
   height: 70%;
   background-color: #fff;
   border-radius: 4px;
@@ -69,8 +71,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  top: 16px;
-  right: 36px;
+  top: 2px;
+  right: 2px;
   width: 36px;
   height: 36px;
   background-color: transparent;
@@ -108,7 +110,7 @@
   background: #dc0808;
   color: white;
   padding: 8px;
-  font-size: 26px;
+  font-size: 20px;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
