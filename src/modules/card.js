@@ -1,6 +1,7 @@
 import { addComment, showComment, showCount } from './comments.js';
 import { baseLink } from './globals.js';
 import { itemLike, likeCount } from './like.js';
+import { errorMsg, successMsg } from './messages.js';
 import { mealsRecipe, mealsIngredients, mealsYoutube } from './recipe.js';
 
 const cardGrid = document.createElement('div');
@@ -16,6 +17,7 @@ const renderCards = (arr) => {
     imagePlaceholder.setAttribute('class', 'image-placeholder');
     imagePlaceholder.setAttribute('alt', '');
     imagePlaceholder.setAttribute('src', `${cardData.strMealThumb}`);
+    imagePlaceholder.style.cursor = 'pointer';
     const textFlex = document.createElement('span');
     textFlex.setAttribute('class', 'text-flex');
 
@@ -103,26 +105,33 @@ const renderCards = (arr) => {
       popUpBg.appendChild(exitBtn);
       const commentForm = document.createElement('div');
       commentForm.classList.add('form-cintainer');
-      commentForm.innerHTML = `<form name="add-comment" class="comment-form" id="comment-${cardData.idMeal}">
-      <input
-        id="username-${cardData.idMeal}"
-        type="text"
-        placeholder="Name (required)"
-        name="name"
-        class="name"
-        required
-      />
-      <br />
-      <textarea
-        id="user-comment-${cardData.idMeal}"
-        placeholder="Your comment (required)"
-        name="comment"
-        class="comment"
-        required
-      ></textarea
-      ><br />
-      <button id="submit-btn-${cardData.idMeal}" class="submit-btn" type="button">Submit</button>
-    </form>`;
+      const theForm = document.createElement('form');
+      theForm.classList.add('comment-form');
+      theForm.id = `comment-${cardData.idMeal}`;
+      theForm.setAttribute('name', 'add-comment');
+      commentForm.appendChild(theForm);
+      const user = document.createElement('input');
+      user.id = `username-${cardData.idMeal}`;
+      user.classList.add('name');
+      user.setAttribute('type', 'text');
+      user.setAttribute('name', 'name');
+      user.setAttribute('placeholder', 'Name (required)');
+      theForm.appendChild(user);
+      const text = document.createElement('textarea');
+      text.id = `user-comment-${cardData.idMeal}`;
+      text.classList.add('comment');
+      text.setAttribute('name', 'comment');
+      text.setAttribute('placeholder', 'Your comment (required)');
+      theForm.appendChild(text);
+      const message = document.createElement('div');
+      message.classList.add('msg');
+      theForm.appendChild(message);
+      const submitBtn = document.createElement('button');
+      submitBtn.id = `submit-btn-${cardData.idMeal}`;
+      submitBtn.classList.add('submit-btn');
+      submitBtn.setAttribute('type', 'button');
+      submitBtn.innerText = 'Submit';
+      theForm.appendChild(submitBtn);
       popUp.appendChild(commentForm);
       popUpBg.appendChild(popUp);
       document.body.appendChild(popUpBg);
@@ -135,18 +144,24 @@ const renderCards = (arr) => {
       setTimeout(() => {
         showComment(baseLink, cardData.idMeal);
       }, 1000);
-      const submitBtn = document.getElementById(
-        `submit-btn-${cardData.idMeal}`,
-      );
       submitBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        addComment(baseLink, cardData.idMeal);
-        setTimeout(() => {
-          showComment(baseLink, cardData.idMeal);
-          showCount(baseLink, cardData.idMeal);
-        }, 1000);
+        if (user.value !== '' && text.value !== '') {
+          addComment(baseLink, cardData.idMeal, user, text);
+          successMsg(message);
+          setTimeout(() => {
+            showComment(baseLink, cardData.idMeal);
+            showCount(baseLink, cardData.idMeal);
+          }, 1000);
+        } else {
+          errorMsg(message);
+        }
       });
+
       showCount(baseLink, cardData.idMeal);
+    });
+    imagePlaceholder.addEventListener('click', () => {
+      commentBtn.click();
     });
   });
 };

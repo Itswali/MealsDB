@@ -23,6 +23,8 @@
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
   overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   .image-placeholder {
     width: 100%;
