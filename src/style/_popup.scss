@@ -1,3 +1,16 @@
+.ingred {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px;
+
+  li {
+    padding: 8px;
+    background: lightgray;
+  }
+}
+
 .pop-up {
   position: fixed;
   top: 50%;
@@ -87,4 +100,21 @@
   line-height: 1;
   padding: 2px 8px;
   border-radius: 25%;
+}
+
+.yt-link {
+  background: #dc0808;
+  color: white;
+  padding: 8px;
+  font-size: 26px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: max-content;
+  gap: 4px;
+
+  i {
+    font-size: 40px;
+  }
 }

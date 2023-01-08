@@ -1,7 +1,7 @@
 import { addComment, showComment, showCount } from './comments.js';
 import { baseLink } from './globals.js';
 import { itemLike, likeCount } from './like.js';
-import mealsRecipe from './recipe.js';
+import { mealsRecipe, mealsIngredients, mealsYoutube } from './recipe.js';
 
 const cardGrid = document.createElement('div');
 cardGrid.classList.add('card-grid');
@@ -69,12 +69,25 @@ const renderCards = (arr) => {
         <img class="image-placeholder" src='${cardData.strMealThumb}' alt='${cardData.strMeal}'/>
         <h2>${cardData.strMeal}</h2>
         <h3 class="recipe-heading">Recipe</h4>
+        <h4>Ingredients</h4>
         `;
+      const ingredients = document.createElement('ul');
+      ingredients.id = `ingred-${cardData.idMeal}`;
+      ingredients.classList.add('ingred');
+      popUp.appendChild(ingredients);
+      setTimeout(() => {
+        mealsIngredients(cardData.idMeal, ingredients);
+      }, 1000);
       const recipe = document.createElement('p');
       recipe.id = `recipe-${cardData.idMeal}`;
       popUp.appendChild(recipe);
       setTimeout(() => {
         mealsRecipe(cardData.idMeal, recipe);
+      }, 1000);
+      const youtube = document.createElement('div');
+      popUp.appendChild(youtube);
+      setTimeout(() => {
+        mealsYoutube(cardData.idMeal, youtube);
       }, 1000);
       const commentHeading = document.createElement('h3');
       commentHeading.classList.add('comments-heading');
