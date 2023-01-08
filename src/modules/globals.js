@@ -10,6 +10,7 @@ const catSeafood = document.getElementById('cat-seafood');
 const catDessert = document.getElementById('cat-dessert');
 const searchCount = document.getElementById('search-count');
 const searchCountHeading = document.getElementById('search-count-heading');
+
 export {
   appId,
   baseLink,

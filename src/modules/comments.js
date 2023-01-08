@@ -1,8 +1,6 @@
 import commentCount from './commentcount.js';
 
-const addComment = async (baseLink, itemId) => {
-  const user = document.getElementById(`username-${itemId}`);
-  const text = document.getElementById(`user-comment-${itemId}`);
+const addComment = async (baseLink, itemId, usr, txt) => {
   await fetch(`${baseLink}/comments/`, {
     method: 'POST',
     headers: {
@@ -10,12 +8,12 @@ const addComment = async (baseLink, itemId) => {
     },
     body: JSON.stringify({
       item_id: itemId,
-      username: user.value,
-      comment: text.value,
+      username: usr.value,
+      comment: txt.value,
     }),
   });
-  user.value = '';
-  text.value = '';
+  usr.value = '';
+  txt.value = '';
 };
 const renderComment = (arr) => {
   let comments = '';
