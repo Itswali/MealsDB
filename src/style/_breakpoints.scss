@@ -17,8 +17,8 @@
   .main-menu {
     position: relative !important;
     display: flex;
+    width: max-content;
     flex-direction: row !important;
-    width: 100%;
     text-align: right !important;
     transition: 0.3s;
     align-items: center !important;
