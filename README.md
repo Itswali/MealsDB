@@ -26,7 +26,7 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 Your Meal finder <a name="Capstone-Project"></a>
+# 📖 Your Meal finder <a name="MealsDB"></a>
 
 **Your Meal finder** is a program that fetch data from an API and shows them in a webpage and allows the user to interact (like, comment, etc.) trhough another API
 
@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://Itswali.github.io/capstoneProject2)
+- [Live Demo Link](https://Itswali.github.io/MealsDB)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
