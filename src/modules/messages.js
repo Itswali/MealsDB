@@ -21,7 +21,6 @@ const errorMsg = (parent) => {
 
 const emptyMsg = (parent) => {
   if (!parent.hasChildNodes()) {
-    // scoreList.style.border = "none";
     parent.innerHTML = '<p class="empty-message">The leaderboard is empty</p>';
   }
 };
